@@ -1,0 +1,4 @@
+mx/uady/sicei/model/Alumno.class
+mx/uady/sicei/rest/AlumnoRest.class
+mx/uady/sicei/SiceiApplication.class
+mx/uady/sicei/service/AlumnoService.class
