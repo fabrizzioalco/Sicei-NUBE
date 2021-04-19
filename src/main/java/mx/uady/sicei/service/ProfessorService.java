@@ -16,9 +16,9 @@ public class ProfessorService {
     private List<Profesor> profesores = new LinkedList<>();
 
     {
-        profesores.add(new Profesor("100001940", "Eduardo Rodriguez", "Eduardo.Rodrigues@uady.com"));
-        profesores.add(new Profesor("100001941", "Rodrigo Guerra", "Rodrigo.Guerra@uady.com"));
-        profesores.add(new Profesor("100001941", "Hernar Barrera", "Hernan.Barrera@uady.com"));
+        profesores.add(new Profesor("Eduardo Rodriguez", "Eduardo.Rodrigues@uady.com"));
+        profesores.add(new Profesor("Rodrigo Guerra", "Rodrigo.Guerra@uady.com"));
+        profesores.add(new Profesor("Hernar Barrera", "Hernan.Barrera@uady.com"));
     }
 
     public List<Profesor> getProfesors() {
@@ -45,7 +45,7 @@ public class ProfessorService {
         }
     }
 
-    public Profesor updateStudent(String professorId, Profesor professor) {
+    public Profesor updateProfessor(String professorId, Profesor professor) {
         // Using searchProfessorById to search for the specific and asign the value as
         // Profesor.
         Profesor profesor = searchProfessorById(professorId).get(0);
@@ -55,7 +55,7 @@ public class ProfessorService {
         return profesores.get(index);
     }
 
-    public Void deleteStudent(String professorId) {
+    public Void deleteProfessor(String professorId) {
         Profesor professor = searchProfessorById(professorId).get(0);
         int index = profesores.indexOf(professor);
         profesores.remove(index);

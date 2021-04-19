@@ -21,9 +21,11 @@ public class Profesor {
     public Profesor(){
     }
 
-    public Profesor(String nombre, String apellido, String correo){
+    public Profesor(String nombre, String correo){
         this.nombre = nombre;
         this.matricula = new Random().nextLong();
+        this.correo = correo;
+        this.horasDeClase =0;
     }
 
     public int getHoras(){
