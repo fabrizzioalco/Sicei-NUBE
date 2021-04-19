@@ -7,12 +7,12 @@ import javax.validation.constraints.*;
 public class Profesor {
 
     @NotEmpty
+    @NotNull
+    private Long matricula; 
+    @NotEmpty
     private String nombre;
     @NotNull
     private int horasDeClase;
-    @NotEmpty
-    @NotNull
-    private Long matricula; 
     @NotEmpty
     @Email
     private String correo; 

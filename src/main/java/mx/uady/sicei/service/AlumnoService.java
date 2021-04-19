@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpStatusCodeException;
 
 import mx.uady.sicei.model.Alumno;
 
@@ -40,7 +41,7 @@ public class AlumnoService {
         if (students.size() > 0) {
             return students;
         } else {
-            throw new HttpClientErrorException(HttpStatus.NOT_FOUND);
+            throw new Error();
         }
     }
 
@@ -49,7 +50,7 @@ public class AlumnoService {
         // Alumno.
         Alumno student = searchStudentById(studentId).get(0);
         int index = alumnos.indexOf(student);
-        if (alumno.getMatricula() == null)
+        if (alumno.getMatricula() != null)
             alumnos.set(index, alumno);
         return alumnos.get(index);
     }

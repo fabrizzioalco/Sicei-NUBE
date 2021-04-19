@@ -1,10 +1,16 @@
 package mx.uady.sicei.model;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class Alumno {
     
     // POJO: Plain Java Object
     // Validar aqui (opcional)
+    @NotEmpty
     private String matricula; // NO vacia - null or ""
+    @NotNull
+    @NotEmpty
     private String nombre; // No vacio - null or ""
 
     public Alumno() {
@@ -33,7 +39,7 @@ public class Alumno {
 
     public Alumno matricula(String matricula) {
         setMatricula(matricula);
-        return this;
+        return this; // Por que regresamos this?
     }
 
     public Alumno nombre(String nombre) {
