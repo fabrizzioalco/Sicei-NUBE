@@ -23,7 +23,7 @@ public class Profesor {
 
     public Profesor(String nombre, String correo){
         this.nombre = nombre;
-        this.matricula = new Random().nextLong();
+        this.matricula = new Random().nextLong((long)0, (long)10000000);
         this.correo = correo;
         this.horasDeClase =0;
     }
